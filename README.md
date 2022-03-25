@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Interactive Rating Component](https://your-solution-url.com)
+- Solution URL: [Interactive Rating Component](https://github.com/Oluwafemi21/interactive-rating-component)
 - Live Site URL: [Interactive Rating Component](https://oluwafemi21.github.io/interactive-rating-component/)
 
 ## My process
