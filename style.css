@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+    --orange: hsl(25, 97%, 53%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --light-blue:#2d3540;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color:var(--very-dark-blue);
+    font-family: 'Overpass', sans-serif;
+     
+    color: white;
+    font-size: 15px;
+
+    display: grid;
+    place-items: center;
+
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card{
+  background-color: var(--dark-blue);
+  border-radius: 15px;
+  max-width: 28%;
+}
+
+.card-container{
+  padding: 25px;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.circle{
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--medium-grey);
+  background-color:var(--light-blue);
+}
+
+.card-container h1{
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.card-container p{
+  color: var(--light-grey);
+  padding: 10px 0;
+  line-height: 1.625;
+}
+
+.response-btns{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.btn{
+  width: 100%;
+  border-radius: 25px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding: 12px 0;
+  margin-top: 25px;
+  background-color: var(--orange);
+}
+
+/* Hover State */
+.response-btns button:hover{
+  color: #fff;
+  background-color:var(--orange);
+}
+
+.response-btns button:focus{
+  background-color: var(--light-grey);
+  color: white;
+}
+
+.btn:hover,
+.btn:focus{
+  background-color: #fff;
+  color:var(--orange);
+}
+
+/* Thank you Card start */
+.pop{
+  animation: pop 0.25s ease-in-out;
+}
+
+.thank-you{
+  text-align: center;
+  padding: 20px;
+}
+
+.thank-you .rating{
+  color: var(--orange);
+  margin: 10px auto;
+  background-color:var(--light-blue);
+  border-radius: 20px;
+  line-height: 1;
+  padding: 10px 13px 8px;
+  max-width: max-content;
+}
+/* Thank you Card end */
+
+.hidden{
+  display: none;
+}
+
+
+.attribution {
+  font-size: 14px;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%); 
+}
+
+@keyframes pop{
+  from{
+    transform: scale(0);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width:768px){
+  .card{
+    max-width: 90%;
+  }
+
+  .card-container p{
+    font-size: 15px;
+  }
+  
+  .message br{
+    display: none;
+  }
+}
